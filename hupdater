@@ -32,9 +32,9 @@ echo -e "${green}\nFor Verbose Output And Command Used, View /root/hupdaterlog.t
 echo -e "${red}\nUpdating Packages File\n"
 logo > /root/hupdaterlog.txt
 echo -e "Updating Packages File\n" >> /root/hupdaterlog.txt
-echo -e "\nCommand Used ---> apt-get upgrade\n" >> /root/hupdaterlog.txt
+echo -e "\nCommand Used ---> apt-get upgrade -y\n" >> /root/hupdaterlog.txt
 sleep 3
-apt-get update | tee -a /root/hupdaterlog.txt
+apt-get update -y | tee -a /root/hupdaterlog.txt
 
 clear
 logo
@@ -72,9 +72,9 @@ clear
 logo
 echo -e "${green}\nChecking Anything To Repair\n"
 echo -e "\nRepairing Broken Packeges\n" >> /root/hupdaterlog.txt
-echo -e "\nCommand Used ---> apt --fix-broken install\n" >> /root/hupdaterlog.txt
+echo -e "\nCommand Used ---> apt --fix-broken install -y \n" >> /root/hupdaterlog.txt
 sleep 3
-apt --fix-broken install | tee -a /root/hupdaterlog.txt
+apt --fix-broken install -y | tee -a /root/hupdaterlog.txt
 
 clear
 logo
